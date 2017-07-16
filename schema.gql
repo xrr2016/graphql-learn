@@ -1,0 +1,43 @@
+type Person {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  age: Int
+  phone: string
+  isMobile: Boolean
+  bestFriend: Person
+}
+
+input PersonInput {
+  id: ID
+  firstName: String!
+  lastName: String!
+  age: Int
+  phone: String
+  isMobile: Boolean
+  bestFriend: ID
+}
+
+type Query {
+  person (id: ID): Person
+  people: [Peoson!]!  
+}
+
+type Mutation {
+  person (input: PersonInput): Person
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+
+
+
+
+
+
+
+
+
