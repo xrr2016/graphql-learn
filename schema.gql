@@ -3,7 +3,7 @@ type Person {
   firstName: String!
   lastName: String!
   age: Int
-  phone: string
+  phone: String
   isMobile: Boolean
   bestFriend: Person
 }
@@ -20,7 +20,7 @@ input PersonInput {
 
 type Query {
   person (id: ID): Person
-  people: [Peoson!]!  
+  people: [Person!]!  
 }
 
 type Mutation {

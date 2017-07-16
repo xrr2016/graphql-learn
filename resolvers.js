@@ -10,7 +10,7 @@ const resolvers = {
     }
   },
   Mutation: {
-    peoson (_, { input }) {
+    person (_, { input }) {
       if (input.id in people) {
         people[input.id] = input
         return people[input.id]
